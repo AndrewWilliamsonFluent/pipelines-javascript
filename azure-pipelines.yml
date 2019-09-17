@@ -19,7 +19,7 @@ jobs:
       displayName: 'Install Node.js'
 
     - script: |
-        git clone git@github.com:fluenttechnology/reviewers.storage.git ../reviewers.storage
+        git clone git@github.com:AndrewWilliamsonFluent/reviewers.storage.git ../reviewers.storage
       displayName: 'Checkout reviewers storage'
 
     - script: |
