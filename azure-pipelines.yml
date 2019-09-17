@@ -22,13 +22,21 @@ jobs:
     #     git clone git@github.com:AndrewWilliamsonFluent/reviewers.storage.git ../reviewers.storage
     #   displayName: 'Checkout reviewers storage'
 
-    - script: |
-        node-dependencies-{{ checksum "package.json" }}
-        node-dependencies-
+    # - script: |
+    #     node-dependencies-{{ checksum "package.json" }}
+    #     node-dependencies-
 
     - script: |
         npm install
       displayName: 'npm install'
+
+    - script: |
+        npx eslint src
+      displayName: 'Check javascript'
+
+    - script: |
+        dotnet restore
+      displayName: 'Install any missing .NET dependencies'
 
     - script: |
         npm run build
