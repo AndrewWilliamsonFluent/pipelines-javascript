@@ -31,7 +31,7 @@ jobs:
       displayName: 'npm install'
 
     - script: |
-        npx eslint src
+        npx eslint
       displayName: 'Check javascript'
 
     - script: |
